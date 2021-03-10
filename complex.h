@@ -19,15 +19,31 @@ public:
 
     Complex(Complex &b);
 
-    Complex add(Complex b);
+    Complex add(const Complex& b);
 
-    Complex substract(Complex b);
+    Complex substract(const Complex& b);
 
-    Complex multiply(Complex b);
+    Complex multiply(const Complex& b);
 
-    Complex divide(Complex b);
+    Complex divide(const Complex& b);
 
-    void out();
+     Complex operator+(const Complex &b);
+
+     Complex operator-(const Complex &b);
+
+    Complex operator*(const Complex &b);
+
+    Complex operator/(const Complex &b);
+
+    Complex &operator+=(const Complex &b);
+
+    Complex &operator-=(const Complex &b);
+
+    Complex &operator*=(const Complex &b);
+
+    Complex &operator/=(const Complex &b);
+
+    friend std::ostream &operator<<(std::ostream &out, Complex &b);
 
 };
 
